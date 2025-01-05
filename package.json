@@ -1,0 +1,17 @@
+{
+  "name": "pos-system",
+  "version": "1.0.0",
+  "description": "Develop POS System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i css/style.css -o css/style-output.css -w "
+  },
+  "author": "Gabriel Austria",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "tailwindcss-textshadow": "^2.1.3"
+  }
+}
