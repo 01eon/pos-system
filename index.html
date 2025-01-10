@@ -83,8 +83,26 @@
 
     <!-- Content -->
     <main class="ml-[5rem] mt-[3rem] h-full">
-        <section id="itemPage" class="m-2 p-2">
+        <section id="itemPage" class=" m-2 p-2">
 
+            <!-- List View -->
+             <table class="tableList_row table-auto w-full text-left">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <script src="data/itemList.js"></script>
+                    <script src="js/tableItem.js"></script>
+                </tbody>
+             </table>
+
+            <!-- Grid View -->
             <div class="itemList__row m-3 grid grid-cols-4 gap-2">
                 <script src="data/itemList.js"></script>
                 <script src="js/mapItem.js"></script>

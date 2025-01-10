@@ -1,7 +1,7 @@
 const itemList = [
-    {
+    { 
         id: 1,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -9,7 +9,7 @@ const itemList = [
     },
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -17,7 +17,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -25,7 +25,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -33,7 +33,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -41,7 +41,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -49,7 +49,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -57,7 +57,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
@@ -65,7 +65,7 @@ const itemList = [
     } ,
     {
         id: 2,
-        category: ['Laundry Soap', 'Fabric Conditioner'],
+        category: ['Laundry Soap'],
         type: 'In-House',
         name: 'SmartKleen Fabric Conditioner',
         price: 10.00,
