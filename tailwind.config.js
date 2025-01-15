@@ -34,7 +34,10 @@ module.exports = {
       colors:{
         primary: '#0012A4',
         secondary: '#8CDFFF',
-        category: '#aaaaaa'
+        category: '#aaaaaa',
+        soap: '#2bacdf',
+        dishwashing: '#1faf1a',
+        diy: '#383838'
       },
     },
   },
