@@ -39,48 +39,33 @@
                     <label for="custNumber">Contact No.: </label>
                     <input type="number" id="custNumber" class="px-1.5 py-0.5" placeholder="09123456789">
                 </div>
-                <table class="table-auto border-collapse border-spacing-1 border border-slate-500 bg-[#fefefe] text-sm">
-                    <thead class="">
-                        <tr>
-                            <th class="border border-slate-500">#</th>
-                            <th class="border border-slate-500">Name</th>
-                            <th class="border border-slate-500">Quantity</th>
-                            <th class="border border-slate-500">Price</th>
-                            <th class="border border-slate-500">Amount</th>
-                            <th class="border border-slate-500">Option</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-slate-500 text-center">
-                                1
-                            </td>
-                            <td class="border border-slate-500 text-center">
-                                Full Service
-                            </td>
-                            <td id="item-1__quantity" contenteditable="false" class="border border-slate-500 text-center">
-                                2
-                            </td>
-                            <td class="border border-slate-500 text-center">
-                                190.00
-                            </td>
-                            <td class="border border-slate-500 text-center">
-                                380.00
-                            </td>
-                            <td class="border border-slate-500 text-center">
-                                <button class="text-[#2787be] font-semibold hover:underline" >Edit</button>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="h-[calc(100vh-50vh)]  overflow-y-auto">
+                    <table class="w-full table-auto border-collapse border-spacing-1 border border-slate-500 bg-[#fefefe] text-sm ">
+                        <thead class="">
+                            <tr>
+                                <th class="border border-slate-500">Name</th>
+                                <th class="border border-slate-500">Quantity</th>
+                                <th class="border border-slate-500">Price</th>
+                                <th class="border border-slate-500">Amount</th>
+                                <th class="border border-slate-500">Option</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <script src="js/addItem.js"></script>
+                        </tbody>
+                    </table>
+                </div>
+                <div class='bg-white py-2 px-7 flex items-center justify-between'>
+                    <h2 class="font-bold text-xl">Total:</h2>
+                    <span class="font-bold text-2xl">121.00</span>
+                </div>
                 <button class="bg-[#fefefe] my-2 px-1.5 py-0.5">Confirm</button>
+                
             </div>
         </section>
 
     </main>
-    <script src="js/main.js"></script>
-    <script src="js/addItem.js"></script>
+    
 </body>
 
 </html>

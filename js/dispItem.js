@@ -9,17 +9,17 @@ itemList.map((item, index) => {
         <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
             <img src='${item.image}' class='w-[8rem]'/>
             <div class='flex flex-col gap-2 justify-center p-3'>
-                <h2 class='font-medium text-xl'>${item.name}</h2>
+                <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
                 <span class='flex gap-2 items-center justify-between font-bold text-lg text-[#465af3]'>
                     ₱ 
-                    <span class='text-3xl'>${item.price.toFixed(2)}</span>
+                    <span id='itemPrice${index + 1}' class='text-3xl'>${item.price.toFixed(2)}</span>
                     <span class='text-2xl'>×</span>
-                    <input id='item-${index}_multiplier' type='number' class='font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
+                    <input id='itemMultiplier${index + 1}' type='number' class='font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
                 </span>
                 <div class='flex gap-2'>
                     <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
                 </div>
-                <button id='item__addItem-${index+1}' class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>Add Item</button>
+                <button onclick='item${index + 1}Add()' id='itemAdd${index + 1}' class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>Add Item</button>
             </div>
         </div>
     `;
