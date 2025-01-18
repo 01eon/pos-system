@@ -40,7 +40,8 @@
                     <input type="number" id="custNumber" class="px-1.5 py-0.5" placeholder="09123456789">
                 </div>
                 <div class="h-[calc(100vh-50vh)]  overflow-y-auto">
-                    <table class="w-full table-auto border-collapse border-spacing-1 border border-slate-500 bg-[#fefefe] text-sm ">
+                    <table
+                        class="w-full table-auto border-collapse border-spacing-1 border border-slate-500 bg-[#fefefe] text-sm ">
                         <thead class="">
                             <tr>
                                 <th class="border border-slate-500">Name</th>
@@ -51,21 +52,23 @@
                             </tr>
                         </thead>
                         <tbody class="tbody">
-                            <script src="js/addItem.js"></script>
+
                         </tbody>
                     </table>
                 </div>
                 <div class='bg-white py-2 px-7 flex items-center justify-between'>
                     <h2 class="font-bold text-xl">Total:</h2>
-                    <span class="font-bold text-2xl">121.00</span>
+                    <span id="total" class="font-bold text-2xl">1.00</span>
                 </div>
                 <button class="bg-[#fefefe] my-2 px-1.5 py-0.5">Confirm</button>
-                
+
             </div>
+            <script src="js/addItem.js"></script>
+
         </section>
 
     </main>
-    
+
 </body>
 
 </html>

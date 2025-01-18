@@ -40,6 +40,19 @@ let multiplierItem4 = document.querySelector('#itemMultiplier4');
 let multiplierItem5 = document.querySelector('#itemMultiplier5');
 let multiplierItem6 = document.querySelector('#itemMultiplier6');
 
+// Item Amount
+// let amountItem1 = document.querySelector('#amountItem1');
+let amountItem2 = document.querySelector('#amountItem2');
+let amountItem3 = document.querySelector('#amountItem3');
+let amountItem4 = document.querySelector('#amountItem4');
+let amountItem5 = document.querySelector('#amountItem5');
+let amountItem6 = document.querySelector('#amountItem6');
+
+let item1 = 0, item2 = 0, item3 = 0, item4 = 0, item5 = 0, item6 = 0;
+
+console.log(`item1 at init: ${item1}`)
+
+
 // function deleteRow(button){
 //     const row = button.closest('tr');
 //     row.remove();
@@ -52,7 +65,9 @@ let multiplierItem6 = document.querySelector('#itemMultiplier6');
 
 // }
 
-
+// let totalAmount = amountItem1.textContent;
+let totalEl = document.querySelector('#total');
+// console.log(`total at init: ${totalEl}`);
 
 
 function item1Add(){
@@ -81,6 +96,63 @@ function item1Add(){
     } else {
         tableBodyContainer.innerHTML += tableRow;
         containerItem1.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem1El = document.querySelector('#amountItem1').textContent;
+
+        // Convert amountItem1El to a NUMBER
+        let amountItem1 = Number(amountItem1El)
+
+        // Added Quantity
+        item1 = amountItem1;
+        console.log(`item1 after adding quantity: ${item1.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item1;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////////////
+
+
+
+    }
+}
+
+function item2Add(){
+    const tableRow = `
+        <tr>
+            <td class="border border-slate-500 text-center">
+                ${nameItem2.textContent}
+            </td>
+            <td id="quantityItem2" class="border border-slate-500 text-center">
+                ${multiplierItem2.value}
+            </td>
+            <td class="border border-slate-500 text-center">
+                ${priceItem2.textContent}
+            </td>
+            <td id='amountItem2' class="border border-slate-500 text-center">
+                ${Number(multiplierItem2.value * priceItem2.textContent).toFixed(2)}
+            </td>
+            <td class="border border-slate-500 text-center">
+                <button onclick='editBtn()' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+            </td>
+        </tr>
+        
+    `
+    if (multiplierItem2.value === '' || multiplierItem2.value <= 0){
+        // Leave empty
+    } else {
+        tableBodyContainer.innerHTML += tableRow;
+        containerItem2.classList.add('hidden');
     }
 
     
