@@ -120,10 +120,7 @@ function item1Add(){
 
         
 
-        /////////////////////////////////////////////////////////////
-
-
-
+        /////////////////////////////////////////////////////
     }
 }
 
@@ -153,12 +150,251 @@ function item2Add(){
     } else {
         tableBodyContainer.innerHTML += tableRow;
         containerItem2.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem2El = document.querySelector('#amountItem2').textContent;
+
+        // Convert amountItem2El to a NUMBER
+        let amountItem2 = Number(amountItem2El)
+
+        // Added Quantity
+        item2 = amountItem2;
+        console.log(`item2 after adding quantity: ${item2.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item2;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////
     }
-
-    
-
 }
 
+
+function item3Add(){
+    const tableRow = `
+        <tr>
+            <td class="border border-slate-500 text-center">
+                ${nameItem3.textContent}
+            </td>
+            <td id="quantityItem3" class="border border-slate-500 text-center">
+                ${multiplierItem3.value}
+            </td>
+            <td class="border border-slate-500 text-center">
+                ${priceItem3.textContent}
+            </td>
+            <td id='amountItem3' class="border border-slate-500 text-center">
+                ${Number(multiplierItem3.value * priceItem3.textContent).toFixed(2)}
+            </td>
+            <td class="border border-slate-500 text-center">
+                <button onclick='editBtn()' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+            </td>
+        </tr>
+        
+    `
+    if (multiplierItem3.value === '' || multiplierItem3.value <= 0){
+        // Leave empty
+    } else {
+        tableBodyContainer.innerHTML += tableRow;
+        containerItem3.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem3El = document.querySelector('#amountItem3').textContent;
+
+        // Convert amountItem3El to a NUMBER
+        let amountItem3 = Number(amountItem3El)
+
+        // Added Quantity
+        item3 = amountItem3;
+        console.log(`item3 after adding quantity: ${item3.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item3;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////
+    }
+}
+
+
+function item4Add(){
+    const tableRow = `
+        <tr>
+            <td class="border border-slate-500 text-center">
+                ${nameItem4.textContent}
+            </td>
+            <td id="quantityItem4" class="border border-slate-500 text-center">
+                ${multiplierItem4.value}
+            </td>
+            <td class="border border-slate-500 text-center">
+                ${priceItem4.textContent}
+            </td>
+            <td id='amountItem4' class="border border-slate-500 text-center">
+                ${Number(multiplierItem4.value * priceItem4.textContent).toFixed(2)}
+            </td>
+            <td class="border border-slate-500 text-center">
+                <button onclick='editBtn()' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+            </td>
+        </tr>
+        
+    `
+    if (multiplierItem4.value === '' || multiplierItem4.value <= 0){
+        // Leave empty
+    } else {
+        tableBodyContainer.innerHTML += tableRow;
+        containerItem4.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem4El = document.querySelector('#amountItem4').textContent;
+
+        // Convert amountItem4El to a NUMBER
+        let amountItem4 = Number(amountItem4El)
+
+        // Added Quantity
+        item4 = amountItem4;
+        console.log(`item4 after adding quantity: ${item4.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item4;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////
+    }
+}
+
+function item5Add(){
+    const tableRow = `
+        <tr>
+            <td class="border border-slate-500 text-center">
+                ${nameItem5.textContent}
+            </td>
+            <td id="quantityItem5" class="border border-slate-500 text-center">
+                ${multiplierItem5.value}
+            </td>
+            <td class="border border-slate-500 text-center">
+                ${priceItem5.textContent}
+            </td>
+            <td id='amountItem5' class="border border-slate-500 text-center">
+                ${Number(multiplierItem5.value * priceItem5.textContent).toFixed(2)}
+            </td>
+            <td class="border border-slate-500 text-center">
+                <button onclick='editBtn()' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+            </td>
+        </tr>
+        
+    `
+    if (multiplierItem5.value === '' || multiplierItem5.value <= 0){
+        // Leave empty
+    } else {
+        tableBodyContainer.innerHTML += tableRow;
+        containerItem5.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem5El = document.querySelector('#amountItem5').textContent;
+
+        // Convert amountItem5El to a NUMBER
+        let amountItem5 = Number(amountItem5El)
+
+        // Added Quantity
+        item5 = amountItem5;
+        console.log(`item5 after adding quantity: ${item5.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item5;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////
+    }
+}
+
+function item6Add(){
+    const tableRow = `
+        <tr>
+            <td class="border border-slate-500 text-center">
+                ${nameItem6.textContent}
+            </td>
+            <td id="quantityItem6" class="border border-slate-500 text-center">
+                ${multiplierItem6.value}
+            </td>
+            <td class="border border-slate-500 text-center">
+                ${priceItem6.textContent}
+            </td>
+            <td id='amountItem6' class="border border-slate-500 text-center">
+                ${Number(multiplierItem6.value * priceItem6.textContent).toFixed(2)}
+            </td>
+            <td class="border border-slate-500 text-center">
+                <button onclick='editBtn()' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+            </td>
+        </tr>
+        
+    `
+    if (multiplierItem6.value === '' || multiplierItem6.value <= 0){
+        // Leave empty
+    } else {
+        tableBodyContainer.innerHTML += tableRow;
+        containerItem6.classList.add('hidden');
+
+        /////////////////////////////////////////////////////////////
+
+        let amountItem6El = document.querySelector('#amountItem6').textContent;
+
+        // Convert amountItem6El to a NUMBER
+        let amountItem6 = Number(amountItem6El)
+
+        // Added Quantity
+        item6 = amountItem6;
+        console.log(`item6 after adding quantity: ${item6.toFixed(2)}`);
+
+        // Convert totalEl from STRING to NUMBER
+        let currentTotal = Number(totalEl.textContent);
+        console.log(`currentTotal: ${currentTotal.toFixed(2)}`);
+
+        // Set new value for Total
+        let newTotal = currentTotal + item6;
+        console.log(`newTotal: ${newTotal.toFixed(2)}`);
+
+        totalEl.textContent = newTotal.toFixed(2);
+
+        
+
+        /////////////////////////////////////////////////////
+    }
+}
 
 
 
