@@ -554,6 +554,58 @@ video {
   display: none;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 20em) {
+  .container {
+    max-width: 20em;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .container {
+    max-width: 23.4375em;
+  }
+}
+
+@media (min-width: 26.5625em) {
+  .container {
+    max-width: 26.5625em;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 48em;
+  }
+}
+
+@media (min-width: 64em) {
+  .container {
+    max-width: 64em;
+  }
+}
+
+@media (min-width: 90em) {
+  .container {
+    max-width: 90em;
+  }
+}
+
+@media (min-width: 112.5em) {
+  .container {
+    max-width: 112.5em;
+  }
+}
+
+@media (min-width: 160em) {
+  .container {
+    max-width: 160em;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -621,6 +673,30 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[calc\] {
+  width: calc;
+}
+
+.w-\[calc\(100vw-\)\] {
+  width: calc(100vw - );
+}
+
+.w-\[calc\(100vw-50\)\] {
+  width: calc(100vw - 50);
+}
+
+.w-\[calc\(100vw-50vw\)\] {
+  width: calc(100vw - 50vw);
+}
+
+.w-\[10rem\] {
+  width: 10rem;
+}
+
+.w-\[12rem\] {
+  width: 12rem;
 }
 
 .table-auto {

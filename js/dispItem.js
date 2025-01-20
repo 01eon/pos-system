@@ -7,7 +7,7 @@ itemList.map((item, index) => {
     }
     const displayItemBlock = `
         <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
-            <img src='${item.image}' class='w-[8rem]'/>
+            <img src='${item.image}' class='w-[12rem]'/>
             <div class='flex flex-col gap-2 justify-center p-3'>
                 <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
                 <span class='flex gap-2 items-center justify-between font-bold text-lg text-[#465af3]'>
