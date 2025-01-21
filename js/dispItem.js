@@ -5,6 +5,36 @@ itemList.map((item, index) => {
         'DIY': '#383838',
         'Service' : '#ccc'
     }
+
+    let containerItem1 = document.querySelector('#item_1');
+    let containerItem2 = document.querySelector('#item_2');
+    let containerItem3 = document.querySelector('#item_3');
+    let containerItem4 = document.querySelector('#item_4');
+    let containerItem5 = document.querySelector('#item_5');
+    let containerItem6 = document.querySelector('#item_6');
+    ///////////////////////////////////////////////////////////////
+    // Original displayItemBlock
+    ///////////////////////////////////////////////////////////////
+    // const displayItemBlock = `
+    //     <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
+    //         <img src='${item.image}' class='w-[12rem]'/>
+    //         <div class='flex flex-col gap-2 justify-center p-3'>
+    //             <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
+    //             <span class='flex gap-2 items-center justify-between font-bold text-lg text-[#465af3]'>
+    //                 ₱ 
+    //                 <span id='itemPrice${index + 1}' class='text-3xl'>${item.price.toFixed(2)}</span>
+    //                 <span class='text-2xl'>×</span>
+    //                 <input id='itemMultiplier${index + 1}' type='number' class='font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
+    //             </span>
+    //             <div class='flex gap-2'>
+    //                 <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
+    //             </div>
+    //             <button onclick='item${index + 1}Add()' id='itemAdd${index + 1}' class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>Add Item</button>
+    //         </div>
+    //     </div>
+    // `;
+    ///////////////////////////////////////////////////////////////
+    
     const displayItemBlock = `
         <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
             <img src='${item.image}' class='w-[12rem]'/>
@@ -19,11 +49,30 @@ itemList.map((item, index) => {
                 <div class='flex gap-2'>
                     <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
                 </div>
-                <button onclick='item${index + 1}Add()' id='itemAdd${index + 1}' class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>Add Item</button>
+                <script>
+                    let itemMultiplier1 = document.querySelector('#itemMultiplier1').value; 
+                    let itemMultiplier2 = document.querySelector('#itemMultiplier2').value; 
+                    let itemMultiplier3 = document.querySelector('#itemMultiplier3').value; 
+                    let itemMultiplier4 = document.querySelector('#itemMultiplier4').value; 
+                    let itemMultiplier5 = document.querySelector('#itemMultiplier5').value; 
+                    let itemMultiplier6 = document.querySelector('#itemMultiplier6').value; 
+                </script>
+                <button 
+                    onclick='itemAdd(
+                        document.querySelector("#itemName${index + 1}"),
+                        document.querySelector("#itemMultiplier${index + 1 }"),
+                        document.querySelector("#itemPrice${index + 1}"),
+                        document.querySelector("#${item.id}")
+                    )' 
+                    id='itemAdd${index + 1}' 
+                    class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>
+                        Add Item
+                </button>
             </div>
         </div>
     `;
 
+    // console.log(`itemMultiplier${index + 1}.textContent`)
 
 
 
