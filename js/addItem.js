@@ -41,12 +41,6 @@ let multiplierItem5 = document.querySelector('#itemMultiplier5');
 let multiplierItem6 = document.querySelector('#itemMultiplier6');
 
 // Item Amount
-// let amountItem1 = document.querySelector('#amountItem1');
-let amountItem2 = document.querySelector('#amountItem2');
-let amountItem3 = document.querySelector('#amountItem3');
-let amountItem4 = document.querySelector('#amountItem4');
-let amountItem5 = document.querySelector('#amountItem5');
-let amountItem6 = document.querySelector('#amountItem6');
 
 let item1 = 0,
     item2 = 0,
@@ -78,26 +72,25 @@ console.log('currentTotal', currentTotal);
 ///////////////////////////////////////////////////////////////
 // DRY Principle (DONUT EDIT)
 ///////////////////////////////////////////////////////////////
-function deleteRow(rowID) {
-    const row = document.getElementById(`tableRow${rowID}`);
-    const containerItem = document.querySelector(`#item_${rowID}`);
-    let amountItem = document.querySelector(`#amountItem${rowID}`).textContent;
-    console.log('amountItem: ', amountItem);
-    console.log('item1 after adding item to receipt', item1);
-    if (row) {
-        // console.log(`Row with ID tableRow${rowID} exist`);
-        row.remove();
-        containerItem.classList.remove('hidden');
+// function editRow(rowID) {
+//     const row = document.getElementById(`tableRow${rowID}`);
+//     const containerItem = document.querySelector(`#item_${rowID}`);
+//     // let amountItem = document.querySelector(`#amountItem${rowID}`).textContent;
+//     // console.log('amountItem: ', amountItem);
+//     console.log('item1 after deleting item to receipt', item1);
+//     if (row) {
+//         // console.log(`Row with ID tableRow${rowID} exist`);
+//         row.remove();
+//         containerItem.classList.remove('hidden');
 
-    } else {
-        console.error(`Row with ID tableRow${rowID} not found.`);
-    }
-
-}
+//     } else {
+//         console.error(`Row with ID tableRow${rowID} not found.`);
+//     }
+// }
 
 function itemAdd(itemName, multiplierEl, priceEl, containerEl){
     tableRowCounter++;
-    console.log(`tableRowCounter: ${tableRowCounter}`);
+    // console.log(`tableRowCounter: ${tableRowCounter}`);
     
     const itemNameText = itemName.textContent;
     const multiplierValue = Number(multiplierEl.value);
@@ -110,7 +103,7 @@ function itemAdd(itemName, multiplierEl, priceEl, containerEl){
             <td class='border border-slate-500 text-center'>${priceValue}</td>
             <td class='border border-slate-500 text-center'>${amountValue}</td>
             <td class='border border-slate-500 text-center'>
-                <button onclick='deleteRow(${tableRowCounter})' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+                <button onclick='editRow(${tableRowCounter})' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
             </td>
 
         </tr>
@@ -120,8 +113,16 @@ function itemAdd(itemName, multiplierEl, priceEl, containerEl){
     containerEl.classList.add('hidden');
 
     // Increase Total
-    let newTotal = currentTotal + amountValue;
-    totalEl.textContent = Number(newTotal).toFixed(2);
+    currentTotal += Number(amountValue);
+    totalEl.textContent = currentTotal.toFixed(2);
+
+    console.log('');
+    console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);
+    console.log(`amountValue after adding item: ${amountValue}`);
+    console.log(`newTotal after adding item: ${newTotal.toFixed(2)}`);
+
+
+
     
 }
 

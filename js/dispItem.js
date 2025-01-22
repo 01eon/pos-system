@@ -6,12 +6,6 @@ itemList.map((item, index) => {
         'Service' : '#ccc'
     }
 
-    let containerItem1 = document.querySelector('#item_1');
-    let containerItem2 = document.querySelector('#item_2');
-    let containerItem3 = document.querySelector('#item_3');
-    let containerItem4 = document.querySelector('#item_4');
-    let containerItem5 = document.querySelector('#item_5');
-    let containerItem6 = document.querySelector('#item_6');
     ///////////////////////////////////////////////////////////////
     // Original displayItemBlock
     ///////////////////////////////////////////////////////////////
@@ -49,14 +43,6 @@ itemList.map((item, index) => {
                 <div class='flex gap-2'>
                     <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
                 </div>
-                <script>
-                    let itemMultiplier1 = document.querySelector('#itemMultiplier1').value; 
-                    let itemMultiplier2 = document.querySelector('#itemMultiplier2').value; 
-                    let itemMultiplier3 = document.querySelector('#itemMultiplier3').value; 
-                    let itemMultiplier4 = document.querySelector('#itemMultiplier4').value; 
-                    let itemMultiplier5 = document.querySelector('#itemMultiplier5').value; 
-                    let itemMultiplier6 = document.querySelector('#itemMultiplier6').value; 
-                </script>
                 <button 
                     onclick='itemAdd(
                         document.querySelector("#itemName${index + 1}"),
