@@ -24,7 +24,6 @@ function editRow(rowID) {
         console.log(`newTotal after editing item: ${newTotal.toFixed(2)}`);
 
 
-        // Remove the row from the table
         rowToDelete.remove();
     } else {
         console.error(`Row with ID tableRow${rowID} not found.`);
