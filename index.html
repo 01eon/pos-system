@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dad's Express Laundry Shop POS</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="css/style-output.css" />
     <link rel="icon" type="image/jpg" href="img/logo-white.png">
@@ -23,7 +23,7 @@
         <h2 class="text-2xl text-white font-bold uppercase">Dad's Express</h2>
 
     </div>
-    <div class="bg-[#b81616]">aa</div>
+    <div class="bg-[#b81616]">cc</div>
     <!-- Content -->
     <main class="mt-[3rem] h-full w-full">
         <section id="itemPage" class="m-2 p-2 flex justify-center gap-6">
@@ -57,20 +57,38 @@
                     </table>
                 </div>
                 <div class='bg-white py-2 px-7 flex items-center justify-between'>
-                    <h2 class="font-bold text-xl">Total:</h2>
+                    <h2 class="font-bold text-xl">Total Amount:</h2>
                     <span id="total" class="font-bold text-2xl">0.00</span>
                 </div>
-                <button id="confirmBtn" class="bg-[#fefefe] my-2 px-1.5 py-0.5">Confirm</button>
+                <button id="confirmBtn" class="bg-[#fefefe] my-2 px-1.5 py-0.5">Purchase</button>
 
             </div>
-            <script src="js/addItem.js"></script>
-            <script src="js/editRow.js"></script>
-            <script src="js/printPDF.js"></script>
+            
             
 
         </section>
 
+        
     </main>
+    <div id="modalPurchase" class="hidden fixed top-0 h-full w-full z-90 bg-[#0000005b] p-5 justify-center items-center">
+        <div class="fixed bg-white flex flex-col justify-center items-center rounded-sm shadow-md shadow-slate-700 px-5 py-2 w-[400px]">
+            <img src="img/logo-white.png" class="" alt="">
+            <div id="receipt" class="flex flex-col justify-between items-center">
+                <h2 class="text-2xl font-bold">Payment Successful</h2>
+                <div class="flex gap-2  items-center font-medium text-2xl">
+                    <span class="">Total</span>
+                    <span id="receiptTotal">0.00</span>
+                </div>
+                <button id="newOrder" class="bg-[#465af3] hover:bg-[#6b7cf7] duration-300 rounded-full text-white px-3 py-2 font-medium shadow-md shadow-slate-300">New Order</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/addItem.js"></script>
+    <script src="js/editRow.js"></script>
+    <script src="js/purchase.js"></script>
 
 </body>
 

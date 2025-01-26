@@ -7,9 +7,17 @@ const total = document.querySelector('#total');
 const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/g;
 
 
+const newOrder = document.querySelector('#newOrder');
+
+newOrder.addEventListener('click', function(){
+    location.reload();
+})
+
+const receiptTotal = document.querySelector('#receiptTotal');
+
 confirmBtn.addEventListener('click', function(){
-    console.log(`CustName: ${custName.value}`)
-    console.log(`CustNumber: ${custNumber.value}`);
+    // console.log(`CustName: ${custName.value}`)
+    // console.log(`CustNumber: ${custNumber.value}`);
     if (custName.value === '' || custNumber === ''){
         const errInput = 'Name and Contact No. is required.'
         errAlert(errInput);
@@ -24,8 +32,13 @@ confirmBtn.addEventListener('click', function(){
         const errTotal = 'You have no added items.'
         errAlert(errTotal);
     } else {
-        // Add code here
-        return;
+        // Add code hereconst modalPurchase = document.querySelector('#modalPurchase');
+        
+        modalPurchase.classList.remove('hidden');
+        modalPurchase.classList.add('flex');
+
+        receiptTotal.textContent = total.textContent;
+
     }
 })
 
