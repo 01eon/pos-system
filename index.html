@@ -23,14 +23,13 @@
         <h2 class="text-2xl text-white font-bold uppercase">Dad's Express</h2>
 
     </div>
-    <div class="bg-[#b81616]">cc</div>
     <!-- Content -->
     <main class="mt-[3rem] h-full w-full">
-        <section id="itemPage" class="m-2 p-2 flex justify-center gap-6">
-            <div class="itemList__container overflow-y overflow-y-auto w-[calc(100vw-50vw)] h-[calc(100vh-5rem)]">
+        <section id="itemPage" class="m-2 p-2 flex mobileSM:flex-col justify-center gap-6">
+            <div class="itemList__container overflow-y-auto mobileSM:w-full laptop:w-[calc(100vw-55vw)] h-[calc(100vh-5rem)]">
                 <script src="js/dispItem.js"></script>
             </div>
-            <div class="cashier__container p-4 w-1/3 bg-[#a5a5a5] rounded-xl flex flex-col gap-3">
+            <div class="cashier__container p-4 mobileSM:w-full laptop:w-1/3 bg-[#a5a5a5] rounded-xl flex flex-col gap-3 justify-between">
                 <div class="flex gap-2 items-center justify-between">
                     <label for="custName">Name: </label>
                     <input type="text" id="custName" class="px-1.5 py-0.5" placeholder="Juan Dela Cruz">
@@ -70,6 +69,7 @@
 
         
     </main>
+
     <div id="modalPurchase" class="hidden fixed top-0 h-full w-full z-90 bg-[#0000005b] p-5 justify-center items-center">
         <div class="fixed bg-white flex flex-col justify-center items-center rounded-sm shadow-md shadow-slate-700 px-5 py-2 w-[400px]">
             <img src="img/logo-white.png" class="" alt="">

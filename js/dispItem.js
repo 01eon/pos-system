@@ -1,48 +1,17 @@
 itemList.map((item, index) => {
-    const tagColor = {
-        'Laundry Soap': '#2bacdf',
-        'Dishwashing Liquid': '#1faf1a',
-        'DIY': '#383838',
-        'Service' : '#ccc'
-    }
 
-    ///////////////////////////////////////////////////////////////
-    // Original displayItemBlock
-    ///////////////////////////////////////////////////////////////
-    // const displayItemBlock = `
-    //     <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
-    //         <img src='${item.image}' class='w-[12rem]'/>
-    //         <div class='flex flex-col gap-2 justify-center p-3'>
-    //             <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
-    //             <span class='flex gap-2 items-center justify-between font-bold text-lg text-[#465af3]'>
-    //                 ₱ 
-    //                 <span id='itemPrice${index + 1}' class='text-3xl'>${item.price.toFixed(2)}</span>
-    //                 <span class='text-2xl'>×</span>
-    //                 <input id='itemMultiplier${index + 1}' type='number' class='font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
-    //             </span>
-    //             <div class='flex gap-2'>
-    //                 <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
-    //             </div>
-    //             <button onclick='item${index + 1}Add()' id='itemAdd${index + 1}' class='bg-orange-500 hover:bg-orange-700 text-white font-bold'>Add Item</button>
-    //         </div>
-    //     </div>
-    // `;
-    ///////////////////////////////////////////////////////////////
     
     const displayItemBlock = `
-        <div id='${item.id}' class='flex gap-2 p-4 w-full bg-[#fefefe] border-b-2 border-slate-400'>
-            <img src='${item.image}' class='w-[12rem]'/>
-            <div class='flex flex-col gap-2 justify-center p-3'>
+        <div id='${item.id}' class='flex gap-2 p-4  laptop:w-full bg-[#fefefe] border-b-2 border-slate-400'>
+            <img src='${item.image}' class='mobileSM:w-[7rem] laptop:w-[12rem] laptop:max-h-[11rem]'/>
+            <div class='flex flex-col gap-2 justify-center p-3 mobileSM:w-[20rem]'>
                 <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
-                <span class='flex gap-2 items-center justify-between font-bold text-lg text-[#465af3]'>
+                <span class='flex gap-2 items-center justify-between font-bold mobileSM:text-xl laptop:text-lg text-[#465af3]'>
                     ₱ 
-                    <span id='itemPrice${index + 1}' class='text-3xl'>${item.price.toFixed(2)}</span>
+                    <span id='itemPrice${index + 1}' class='mobileSM:text-lg laptop:text-3xl'>${item.price.toFixed(2)}</span>
                     <span class='text-2xl'>×</span>
-                    <input id='itemMultiplier${index + 1}' type='number' class='font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
+                    <input id='itemMultiplier${index + 1}' type='number' class='w-[3rem] font-normal border-2 border-slate-300 rounded-xl px-1.5 text-black' min='1' placeholder='0'/>
                 </span>
-                <div class='flex gap-2'>
-                    <span style='background-color:${tagColor[item.category] }' class='rounded-xl px-1.5 py-0.5 text-white'>${item.category}</span>
-                </div>
                 <button 
                     onclick='itemAdd(
                         document.querySelector("#itemName${index + 1}"),

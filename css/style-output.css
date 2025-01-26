@@ -615,6 +615,34 @@ video {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[9\.5rem\] {
+  height: 9.5rem;
+}
+
+.h-\[calc\(100vh-55vh\)\] {
+  height: calc(100vh - 55vh);
+}
+
+.max-h-\[9\.5rem\] {
+  max-height: 9.5rem;
+}
+
+.max-h-\[12rem\] {
+  max-height: 12rem;
+}
+
+.max-h-\[10rem\] {
+  max-height: 10rem;
+}
+
+.max-h-\[11rem\] {
+  max-height: 11rem;
+}
+
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -671,6 +699,34 @@ video {
 
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-\[calc\(100vw-60vw\)\] {
+  width: calc(100vw - 60vw);
+}
+
+.w-\[calc\(100vw-55vw\)\] {
+  width: calc(100vw - 55vw);
+}
+
+.w-\[1rem\] {
+  width: 1rem;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
+}
+
+.w-\[3rem\] {
+  width: 3rem;
 }
 
 .table-auto {
@@ -1064,4 +1120,105 @@ video {
 
 .hover\:opacity-50:hover {
   opacity: 0.5;
+}
+
+@media (min-width: 20em) {
+  .mobileSM\:flex {
+    display: flex;
+  }
+
+  .mobileSM\:w-full {
+    width: 100%;
+  }
+
+  .mobileSM\:w-\[5rem\] {
+    width: 5rem;
+  }
+
+  .mobileSM\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .mobileSM\:w-1\/2 {
+    width: 50%;
+  }
+
+  .mobileSM\:w-\[\] {
+    width: ;
+  }
+
+  .mobileSM\:w-\[3rem\] {
+    width: 3rem;
+  }
+
+  .mobileSM\:w-\[10rem\] {
+    width: 10rem;
+  }
+
+  .mobileSM\:w-\[20rem\] {
+    width: 20rem;
+  }
+
+  .mobileSM\:w-\[20srem\] {
+    width: 20srem;
+  }
+
+  .mobileSM\:w-\[7rem\] {
+    width: 7rem;
+  }
+
+  .mobileSM\:flex-row {
+    flex-direction: row;
+  }
+
+  .mobileSM\:flex-col {
+    flex-direction: column;
+  }
+
+  .mobileSM\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .mobileSM\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .mobileSM\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .laptop\:max-h-\[11rem\] {
+    max-height: 11rem;
+  }
+
+  .laptop\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .laptop\:w-\[calc\(100vw-55vw\)\] {
+    width: calc(100vw - 55vw);
+  }
+
+  .laptop\:w-\[12rem\] {
+    width: 12rem;
+  }
+
+  .laptop\:w-full {
+    width: 100%;
+  }
+
+  .laptop\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .laptop\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
