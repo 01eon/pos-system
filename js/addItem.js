@@ -72,40 +72,44 @@ let currentTotal = Number(totalEl.textContent);
 ///////////////////////////////////////////////////////////////
 // DRY Principle (DO NOT EDIT)
 ///////////////////////////////////////////////////////////////
-
-
 function itemAdd(itemName, multiplierEl, priceEl, containerEl){
-    tableRowCounter++;
-    // console.log(`tableRowCounter: ${tableRowCounter}`);
+    if (multiplierEl.value === 0 || multiplierEl.value === '0' || multiplierEl.value == ''){
+        const errMultiplier = 'Unable to add item without a quantity.'
+        errAlert(errMultiplier);
+    } else {
+        tableRowCounter++;
+        // console.log(`tableRowCounter: ${tableRowCounter}`);
+        
+        const itemNameText = itemName.textContent;
+        const multiplierValue = Number(multiplierEl.value);
+        const priceValue = Number(priceEl.textContent).toFixed(2);
+        const amountValue = Number(multiplierValue * priceValue).toFixed(2);
+        const tableRow = `
+            <tr id='tableRow${tableRowCounter}'>
+                <td class='border border-slate-500 text-center'>${itemNameText}</td>
+                <td class='border border-slate-500 text-center'>${multiplierValue}</td>
+                <td class='border border-slate-500 text-center'>${priceValue}</td>
+                <td class='border border-slate-500 text-center'>${amountValue}</td>
+                <td class='border border-slate-500 text-center'>
+                    <button onclick='editRow(${tableRowCounter})' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
+                </td>
     
-    const itemNameText = itemName.textContent;
-    const multiplierValue = Number(multiplierEl.value);
-    const priceValue = Number(priceEl.textContent).toFixed(2);
-    const amountValue = Number(multiplierValue * priceValue).toFixed(2);
-    const tableRow = `
-        <tr id='tableRow${tableRowCounter}'>
-            <td class='border border-slate-500 text-center'>${itemNameText}</td>
-            <td class='border border-slate-500 text-center'>${multiplierValue}</td>
-            <td class='border border-slate-500 text-center'>${priceValue}</td>
-            <td class='border border-slate-500 text-center'>${amountValue}</td>
-            <td class='border border-slate-500 text-center'>
-                <button onclick='editRow(${tableRowCounter})' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
-            </td>
-
-        </tr>
-    `
-
-    tableBodyContainer.innerHTML += tableRow;
-    containerEl.classList.add('hidden');
-
-    // Increase Total
-    currentTotal += Number(amountValue);
-    totalEl.textContent = currentTotal.toFixed(2);
-
-    // console.log('');
-    // console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);
-    // console.log(`amountValue after adding item: ${amountValue}`);
-    // console.log(`newTotal after adding item: ${newTotal.toFixed(2)}`);
+            </tr>
+        `
+    
+        tableBodyContainer.innerHTML += tableRow;
+        containerEl.classList.add('hidden');
+    
+        // Increase Total
+        currentTotal += Number(amountValue);
+        totalEl.textContent = currentTotal.toFixed(2);
+    
+        // console.log('');
+        // console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);
+        // console.log(`amountValue after adding item: ${amountValue}`);
+        // console.log(`newTotal after adding item: ${newTotal.toFixed(2)}`);
+    }
+    
 
 
 
