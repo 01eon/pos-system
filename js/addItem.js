@@ -49,10 +49,10 @@ let item1 = 0,
     item5 = 0,
     item6 = 0;
 
-console.log(`item1 at init: ${item1}`)
+// console.log(`item1 at init: ${item1}`)
 
 let tableRowCounter = 0;
-console.log('tableRowCounter at Init:', tableRowCounter);
+// console.log('tableRowCounter at Init:', tableRowCounter);
 
 ///////////////////////////////////////////////////////////////
 // Price Variables
@@ -64,29 +64,15 @@ let newTotal = 0;
 
 // Convert totalEl from STRING to NUMBER
 let currentTotal = Number(totalEl.textContent);
-console.log('currentTotal', currentTotal);
+// console.log('currentTotal', currentTotal);
 
 
 
 
 ///////////////////////////////////////////////////////////////
-// DRY Principle (DONUT EDIT)
+// DRY Principle (DO NOT EDIT)
 ///////////////////////////////////////////////////////////////
-// function editRow(rowID) {
-//     const row = document.getElementById(`tableRow${rowID}`);
-//     const containerItem = document.querySelector(`#item_${rowID}`);
-//     // let amountItem = document.querySelector(`#amountItem${rowID}`).textContent;
-//     // console.log('amountItem: ', amountItem);
-//     console.log('item1 after deleting item to receipt', item1);
-//     if (row) {
-//         // console.log(`Row with ID tableRow${rowID} exist`);
-//         row.remove();
-//         containerItem.classList.remove('hidden');
 
-//     } else {
-//         console.error(`Row with ID tableRow${rowID} not found.`);
-//     }
-// }
 
 function itemAdd(itemName, multiplierEl, priceEl, containerEl){
     tableRowCounter++;
@@ -116,75 +102,13 @@ function itemAdd(itemName, multiplierEl, priceEl, containerEl){
     currentTotal += Number(amountValue);
     totalEl.textContent = currentTotal.toFixed(2);
 
-    console.log('');
-    console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);
-    console.log(`amountValue after adding item: ${amountValue}`);
-    console.log(`newTotal after adding item: ${newTotal.toFixed(2)}`);
+    // console.log('');
+    // console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);
+    // console.log(`amountValue after adding item: ${amountValue}`);
+    // console.log(`newTotal after adding item: ${newTotal.toFixed(2)}`);
 
 
 
     
 }
 
-
-///////////////////////////////////////////////////////////////
-// DEBUGGING Section
-///////////////////////////////////////////////////////////////
-
-
-
-///////////////////////////////////////////////////////////////
-// Version 1
-///////////////////////////////////////////////////////////////
-
-
-
-
-// function item1Add() {
-//     tableRowCounter++;
-//     console.log(`tableRowCounter: ${tableRowCounter}`);
-
-//     const tableRow = `
-//         <tr id='tableRow${tableRowCounter }'>
-//             <td class="border border-slate-500 text-center">
-//                 ${nameItem1.textContent}
-//             </td>
-//             <td id="quantityItem1" class="border border-slate-500 text-center">
-//                 ${multiplierItem1.value}
-//             </td>
-//             <td class="border border-slate-500 text-center">
-//                 ${priceItem1.textContent}
-//             </td>
-//             <td id='amountItem1' class="border border-slate-500 text-center">
-//                 ${Number(multiplierItem1.value * priceItem1.textContent).toFixed(2)}
-//             </td>
-//             <td class="border border-slate-500 text-center">
-//                 <button onclick='deleteRow(${tableRowCounter})' id='editItem1' class="editBtn text-[#2736be] font-semibold hover:underline" >Edit</button>
-//             </td>
-//         </tr>
-        
-//     `
-
-//     if (multiplierItem1.value === '' || multiplierItem1.value <= 0) {
-//         // Leave empty
-//     } else {
-//         tableBodyContainer.innerHTML += tableRow;
-//         containerItem1.classList.add('hidden');
-
-
-//         let amountItem1El = document.querySelector('#amountItem1').textContent;
-
-//         // Convert amountItem1El to a NUMBER
-//         let amountItem1 = Number(amountItem1El)
-
-
-//         // Added Quantity
-//         item1 = amountItem1;
-
-
-//         // Set new value for Total
-//         newTotal = currentTotal + item1;
-
-//         totalEl.textContent = newTotal.toFixed(2);
-//     }
-// }
