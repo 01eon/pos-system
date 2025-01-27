@@ -103,6 +103,9 @@ function itemAdd(itemName, multiplierEl, priceEl, containerEl){
         // Increase Total
         currentTotal += Number(amountValue);
         totalEl.textContent = currentTotal.toFixed(2);
+
+        const addedItem = `Successfully added <span class='font-bold'>${itemNameText}</span> to the order form.`;
+        successAlert(addedItem);
     
         // console.log('');
         // console.log(`currentTotal after adding item: ${currentTotal.toFixed(2)}`);

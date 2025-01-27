@@ -18,6 +18,8 @@ function editRow(rowID) {
 
 
         rowToDelete.remove();
+        const editingRow = `You are currently editing <span class='font-bold'>${rowToDelete.children[0].textContent}</span>.`
+        successAlert(editingRow);
     } else {
         console.error(`Row with ID tableRow${rowID} not found.`);
     }

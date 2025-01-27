@@ -17,6 +17,8 @@
 </head>
 
 <body class="flex relative font-montsert bg-[#ebebeb]">
+    <div id="errorSection" class="fixed top-2 right-8 z-10 flex flex-col gap-4 ">
+    </div>
     <!-- Navbar -->
     <div class="w-screen fixed bg-[#465af3] flex justify-center items-center gap-4 p-2 ">
 
@@ -25,17 +27,17 @@
     </div>
     <!-- Content -->
     <main class="mt-[3rem] h-full w-full">
-        <section id="itemPage" class="m-2 p-2 flex mobileSM:flex-col justify-center gap-6">
+        <section id="itemPage" class="m-2 p-2 flex mobileSM:flex-col tablet:flex-row justify-center gap-6">
             <div class="itemList__container overflow-y-auto mobileSM:w-full laptop:w-[calc(100vw-55vw)] h-[calc(100vh-5rem)]">
                 <script src="js/dispItem.js"></script>
             </div>
-            <div class="cashier__container p-4 mobileSM:w-full laptop:w-1/3 bg-[#a5a5a5] rounded-xl flex flex-col gap-3 justify-between">
+            <div class="cashier__container p-4 mobileSM:w-full laptop:w-1/3 h-[calc(100vh-5rem)] bg-[#bac6e6] rounded-xl flex flex-col gap-3 justify-between">
                 <div class="flex gap-2 items-center justify-between">
-                    <label for="custName">Name: </label>
+                    <label for="custName" class="font-bold">Name: </label>
                     <input type="text" id="custName" class="px-1.5 py-0.5" placeholder="Juan Dela Cruz">
                 </div>
                 <div class="flex gap-2 items-center justify-between">
-                    <label for="custNumber">Contact No.: </label>
+                    <label for="custNumber" class="font-bold">Contact No.: </label>
                     <input type="number" id="custNumber" class="px-1.5 py-0.5" placeholder="09123456789">
                 </div>
                 <div class="h-[calc(100vh-50vh)]  overflow-y-auto">
@@ -59,7 +61,7 @@
                     <h2 class="font-bold text-xl">Total Amount:</h2>
                     <span id="total" class="font-bold text-2xl">0.00</span>
                 </div>
-                <button id="confirmBtn" class="bg-[#fefefe] my-2 px-1.5 py-0.5">Purchase</button>
+                <button id="confirmBtn" class="bg-[#fefefe] my-2 px-1.5 py-0.5 font-bold">Purchase</button>
 
             </div>
             

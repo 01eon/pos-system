@@ -4,9 +4,9 @@ itemList.map((item, index) => {
     const displayItemBlock = `
         <div id='${item.id}' class='flex gap-2 p-4  laptop:w-full bg-[#fefefe] border-b-2 border-slate-400'>
             <img src='${item.image}' class='mobileSM:w-[7rem] laptop:w-[12rem] laptop:max-h-[11rem]'/>
-            <div class='flex flex-col gap-2 justify-center p-3 mobileSM:w-[20rem]'>
+            <div class='flex flex-col gap-2 justify-center p-3 mobileSM:w-[20rem] laptop:w-full'>
                 <h2 id='itemName${index+1}' class='font-medium text-xl'>${item.name}</h2>
-                <span class='flex gap-2 items-center justify-between font-bold mobileSM:text-xl laptop:text-lg text-[#465af3]'>
+                <span class='flex gap-2 items-center font-bold mobileSM:text-xl laptop:text-lg text-[#465af3]'>
                     ₱ 
                     <span id='itemPrice${index + 1}' class='mobileSM:text-lg laptop:text-3xl'>${item.price.toFixed(2)}</span>
                     <span class='text-2xl'>×</span>
